@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Science Gothic';
+}
+
+html {
+    font-size: 10px;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#414141, #151515)
+}
+
+.player {
+    width: 35rem;
+    height: 70rem;
+    background: linear-gradient(to right, #37b75d, #023810);
+    box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.8);
+    border: 1px solid;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3rem;
+
+}
+
+.player-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #2b2c2e;
+    color: #a8a9ab;
+    box-shadow: .5rem .5rem 2rem -.1rem rgba(0, 0, 0, 0.5), -.4rem -.4rem 2rem -.1rem rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.player-btn:active {
+    transform: translateY(.2rem);
+}
+
+.player-top span {
+    font-size: 1.3rem;
+}
+
+.player-body {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-song {
+    border: .5rem solid rgba(202, 188, 188, 0.4);
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    box-shadow: .6rem .6rem 4rem -.1rem rgba(0, 0, 0, 0.9), -.6rem -.6rem 4rem -.1rem rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.rotate{
+    animation: rotateCover 10s linear infinite;
+}
+
+@keyframes rotateCover{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.cover{
+    width:100%;
+    height: 100%;
+    background-color: #101112;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+.cover span {
+    display: block;
+    color: #dde0e7;
+    position: absolute;
+}
+
+.cover span:nth-child(1){
+    font-size: 1.6rem;
+    top:20%;
+    left: 40%;
+}
+.cover span:nth-child(2){
+    font-size: 2rem;
+    top:35%;
+    left: 30%;
+    
+}
+
+.song-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.song-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.song-name{
+    font-size: 2rem;
+    
+}
+
+.song-movie{
+    font-size: 1.4rem;
+}
+
+.song-info i{
+    font-size: 2rem;
+    background: linear-gradient(to right, #6c0303, #df3f3f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.song-time{
+    width: 100%;
+    height: .5rem;
+    background-color: #0c0c0d;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    box-shadow: .2rem .2rem .5rem rgba(255,255,255,.4);
+    cursor: pointer;
+    position: relative;
+}
+
+.song-progress{
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, #dde0e7, #a8a9ab);
+    border-radius: .5rem;
+}
+
+.time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.time span{
+    font-size: 1.4 rem;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controls :nth-child(3) {
+    height: 5rem;
+    width: 5rem;
+    background: linear-gradient(to right, #dde0e7,#414141 );
+    color: #151515;
+}
+
+.player-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.player-footer i{
+    font-size: 1.8rem;
+}
+
+.player-footer span{
+    font-size: larger;
+}
